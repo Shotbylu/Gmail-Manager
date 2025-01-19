@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+      prefWidth="480.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.GmailLoginEmail">
+   <HBox alignment="BOTTOM_CENTER" prefHeight="80.0" prefWidth="480.0">
+      <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
+         <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@z_google_logo.png"/>
+         </ImageView>
+      </VBox>
+   </HBox>
+   <HBox alignment="BOTTOM_CENTER" prefHeight="55.0" prefWidth="480.0">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <Label text="Sign in">
+            <font>
+               <Font name="Microsoft PhagsPa" size="25.0"/>
+            </font>
+         </Label>
+      </VBox>
+   </HBox>
+   <HBox alignment="BOTTOM_CENTER" prefHeight="29.0" prefWidth="480.0">
+      <VBox alignment="CENTER" prefHeight="30.0" prefWidth="302.0">
+         <Label prefHeight="26.0" prefWidth="182.0" text="Use your Google Account">
+            <font>
+               <Font name="Microsoft Sans Serif" size="16.0"/>
+            </font>
+         </Label>
+      </VBox>
+   </HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <VBox prefHeight="100.0" prefWidth="45.0"/>
+      <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="386.0">
+         <Label text="    Email"/>
+         <TextField fx:id="textGetGoogleLoginEmail" onKeyPressed="#validateEmail" prefHeight="47.0"
+                    prefWidth="386.0">
+            <font>
+               <Font name="Microsoft Sans Serif" size="17.0"/>
+            </font>
+         </TextField>
+      </VBox>
+   </HBox>
+   <HBox prefHeight="62.0" prefWidth="480.0">
+      <Label fx:id="labelEmailDoesNotExist" opacity="0.0" text="               Your email does not exist"
+             textFill="RED"/>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="114.0" prefWidth="480.0" spacing="185.0">
+      <Button mnemonicParsing="false" onAction="#createGoogleAccount" prefHeight="30.0" prefWidth="122.0"
+              text="Create Account" textFill="#048aff">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Button>
+      <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginEmailComplete"
+              prefHeight="40.0" prefWidth="70.0" text="Next" textFill="#048aff">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Button>
+   </HBox>
+</VBox>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+      prefWidth="480.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.GoogleAccountCreation">
+   <HBox alignment="BOTTOM_CENTER" prefHeight="79.0" prefWidth="478.0" spacing="175.0">
+      <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@z_google_logo.png"/>
+      </ImageView>
+      <VBox prefHeight="200.0" prefWidth="100.0"/>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="478.0">
+      <Label prefHeight="39.0" prefWidth="341.0" text="          Create your Google Account">
+         <font>
+            <Font size="21.0"/>
+         </font>
+      </Label>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="12.0" prefWidth="478.0" spacing="110.0">
+      <Label fx:id="labelUsernameWasTaken" opacity="0.0" text="Your username was taken" textFill="RED">
+         <font>
+            <Font size="11.0"/>
+         </font>
+      </Label>
+      <VBox prefHeight="200.0" prefWidth="100.0"/>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="57.0" prefWidth="478.0" spacing="10.0">
+      <TextField fx:id="textGetAccountFirstName" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0"
+                 prefWidth="150.0" promptText="First name">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </TextField>
+      <TextField fx:id="textGetAccountLastName" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0"
+                 prefWidth="150.0" promptText="Last name">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </TextField>
+      <VBox prefHeight="50.0" prefWidth="46.0"/>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="56.0" prefWidth="478.0">
+      <TextField fx:id="textGetAccountUsername" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0"
+                 prefWidth="250.0" promptText="Username">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </TextField>
+      <Label text=" @gmail.com">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </Label>
+      <VBox prefHeight="56.0" prefWidth="38.0"/>
+   </HBox>
+   <HBox prefHeight="52.0" prefWidth="478.0">
+      <VBox prefHeight="52.0" prefWidth="478.0" spacing="20.0">
+         <Label text="                   You can use any letters, numbers or symbols" textFill="#575555">
+            <font>
+               <Font size="11.0"/>
+            </font>
+         </Label>
+         <Label fx:id="labelPasswordIsInvalid" opacity="0.0"
+                text="                   Your password does not meet the requirement" textFill="RED">
+            <font>
+               <Font size="11.0"/>
+            </font>
+         </Label>
+      </VBox>
+   </HBox>
+   <HBox fx:id="hboxSignupViewPasswords" alignment="CENTER" prefHeight="15.0" prefWidth="480.0" spacing="10.0"/>
+   <HBox alignment="CENTER" prefHeight="57.0" prefWidth="478.0" spacing="10.0">
+      <PasswordField fx:id="passwordFieldCreateAccount" maxHeight="-Infinity" maxWidth="-Infinity"
+                     minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="150.0"
+                     promptText="Password">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="passwordFieldCreateAccountConfirm" maxHeight="-Infinity" maxWidth="-Infinity"
+                     minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="150.0"
+                     promptText="Confirm">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </PasswordField>
+      <VBox prefHeight="50.0" prefWidth="46.0"/>
+   </HBox>
+   <Label text="                   Use 8 or more characters with a mix of numbers, lower-" textFill="#575555">
+      <font>
+         <Font size="11.0"/>
+      </font>
+   </Label>
+   <Label text="                   case, and upper-case letters" textFill="#575555">
+      <font>
+         <Font size="11.0"/>
+      </font>
+   </Label>
+   <HBox alignment="CENTER" prefHeight="43.0" prefWidth="478.0" spacing="138.0">
+      <CheckBox fx:id="checkboxShowPasswordCreateAccount" mnemonicParsing="false"
+                onAction="#showCreateAccountPassword" text="  Show password">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </CheckBox>
+      <VBox prefHeight="200.0" prefWidth="100.0"/>
+   </HBox>
+   <HBox prefHeight="14.0" prefWidth="478.0"/>
+   <HBox alignment="CENTER" prefHeight="76.0" prefWidth="478.0" spacing="175.0">
+      <Button mnemonicParsing="false" onAction="#signinInstead" prefHeight="30.0" prefWidth="122.0"
+              text="Sign in instead" textFill="#048aff">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Button>
+      <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAccountComplete"
+              prefHeight="40.0" prefWidth="70.0" text="Next" textFill="#048aff">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Button>
+   </HBox>
+</VBox>

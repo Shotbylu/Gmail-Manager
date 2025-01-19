@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="500.0" prefWidth="800.0" spacing="30.0" xmlns="http://javafx.com/javafx/15.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GoogleAccountPage">
+   <VBox alignment="CENTER" prefHeight="500.0" prefWidth="439.0" spacing="5.0">
+      <ImageView fitHeight="60.0" fitWidth="60.0">
+         <Image url="@z_account_pfp_logo.png"/>
+      </ImageView>
+      <HBox alignment="TOP_CENTER" prefHeight="53.0" prefWidth="439.0">
+         <Label text="Welcome, ">
+            <font>
+               <Font size="22.0"/>
+            </font>
+         </Label>
+         <Label fx:id="textGetGoogleAccountFullName">
+            <font>
+               <Font size="22.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <Label text=" Basic Info">
+         <font>
+            <Font size="20.0"/>
+         </font>
+      </Label>
+      <HBox alignment="TOP_CENTER" prefHeight="27.0" prefWidth="439.0" spacing="10.0">
+         <Label text="Email:  ">
+            <font>
+               <Font size="16.0"/>
+            </font>
+         </Label>
+         <Label fx:id="textGetGmailAddress">
+            <font>
+               <Font size="16.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="439.0" spacing="10.0">
+         <Label text="Password:  ">
+            <font>
+               <Font size="16.0"/>
+            </font>
+         </Label>
+         <Label fx:id="textGetGmailPassword">
+            <font>
+               <Font size="16.0"/>
+            </font>
+         </Label>
+      </HBox>
+      <HBox prefHeight="38.0" prefWidth="439.0"/>
+      <Button mnemonicParsing="false" onAction="#playMiniGame" text="Mini Game">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </Button>
+      <HBox prefHeight="13.0" prefWidth="439.0"/>
+      <Button mnemonicParsing="false" onAction="#returnToGmail" text="Back to Gmail">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </Button>
+      <HBox prefHeight="13.0" prefWidth="439.0"/>
+      <Button mnemonicParsing="false" onAction="#googleAccountSignOut" text="Sign out">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </Button>
+   </VBox>
+</HBox>

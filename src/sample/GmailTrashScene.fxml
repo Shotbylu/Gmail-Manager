@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+      prefWidth="800.0" spacing="10.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.GmailTrashScene">
+   <VBox alignment="CENTER" prefHeight="105.0" prefWidth="150.0" spacing="20.0">
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="150.0">
+         <ImageView fitHeight="41.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@z_gmail_logo.png"/>
+         </ImageView>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="150.0" spacing="30.0">
+         <Button mnemonicParsing="false" onAction="#composeNewEmail" prefHeight="40.0" prefWidth="120.0"
+                 text="+ Compose" textAlignment="CENTER">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Button>
+      </HBox>
+      <VBox alignment="TOP_CENTER" prefHeight="287.0" prefWidth="150.0" spacing="10.0">
+         <Button mnemonicParsing="false" onAction="#checkInbox" text="📩   Inbox">
+            <font>
+               <Font size="15.0"/>
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#checkSent" text="📤   Sent  ">
+            <font>
+               <Font size="15.0"/>
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#checkDrafts" text="📄  Drafts">
+            <font>
+               <Font size="15.0"/>
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#checkTrash" text="🗑   Trash ">
+            <font>
+               <Font size="15.0"/>
+            </font>
+         </Button>
+      </VBox>
+   </VBox>
+   <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="638.0" spacing="10.0">
+      <HBox prefHeight="100.0" prefWidth="442.0">
+         <VBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="520.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <TextField fx:id="textGetSearchBox" onKeyPressed="#searchForMail" prefHeight="40.0"
+                          prefWidth="310.0" promptText="🔍 Search inbox">
+                  <font>
+                     <Font size="18.0"/>
+                  </font>
+               </TextField>
+               <VBox alignment="BOTTOM_RIGHT" prefHeight="72.0" prefWidth="210.0">
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <Label text="Trash Emails:"/>
+                     <Label fx:id="trashCount" text="0"/>
+                  </HBox>
+               </VBox>
+            </HBox>
+            <HBox prefHeight="0.0" prefWidth="520.0" spacing="50.0">
+               <ComboBox fx:id="selectEmails" prefWidth="150.0"/>
+               <ComboBox fx:id="recoverEmailTo" prefHeight="26.0" prefWidth="173.0"/>
+               <Button mnemonicParsing="false" onAction="#deleteTrashedEmails" text="Delete"/>
+            </HBox>
+         </VBox>
+         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="118.0">
+            <ImageView fitHeight="39.0" fitWidth="39.0" onMouseClicked="#loadAccountPage">
+               <Image url="@z_account_pfp_logo.png"/>
+            </ImageView>
+         </VBox>
+      </HBox>
+      <HBox prefHeight="392.0" prefWidth="638.0">
+         <ListView fx:id="listTrashedEmails" editable="true" prefHeight="386.0" prefWidth="536.0"/>
+      </HBox>
+   </VBox>
+</HBox>

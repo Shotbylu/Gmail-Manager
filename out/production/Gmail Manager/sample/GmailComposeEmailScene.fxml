@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.GmailComposeEmailScene">
+   <VBox prefHeight="500.0" prefWidth="132.0">
+      <ImageView fitHeight="500.0" fitWidth="132.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <Image url="@z_left_gmail_background.png"/>
+      </ImageView>
+   </VBox>
+   <VBox alignment="TOP_CENTER" prefHeight="350.0" prefWidth="534.0">
+      <VBox blendMode="MULTIPLY" focusTraversable="true" prefHeight="563.0" prefWidth="534.0">
+         <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="534.0">
+            <Label text="New Message" textFill="#3e1d1d">
+               <font>
+                  <Font name="Bell MT Bold" size="31.0"/>
+               </font>
+            </Label>
+         </HBox>
+         <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="534.0" spacing="30.0">
+            <Label prefHeight="22.0" prefWidth="51.0" text="  To  ">
+               <font>
+                  <Font name="Bell MT" size="18.0"/>
+               </font>
+            </Label>
+            <TextField fx:id="textGetEmailRecipient" prefHeight="26.0" prefWidth="469.0"/>
+         </HBox>
+         <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="534.0" spacing="10.0">
+            <Label text="  Subject">
+               <font>
+                  <Font name="Bell MT" size="18.0"/>
+               </font>
+            </Label>
+            <TextField fx:id="textGetEmailSubject" prefHeight="26.0" prefWidth="460.0"/>
+         </HBox>
+         <TextArea fx:id="textGetEmailContent" prefHeight="340.0" prefWidth="534.0"/>
+         <HBox alignment="CENTER" prefHeight="39.0" prefWidth="534.0" spacing="25.0">
+            <ComboBox fx:id="chooseFont" onAction="#setFamily" prefHeight="26.0" prefWidth="140.0"/>
+            <Button mnemonicParsing="false" onAction="#increaseFont" text="A+"/>
+            <Button mnemonicParsing="false" onAction="#decreaseFont" text="A-"/>
+            <Button mnemonicParsing="false" onAction="#sendEmail" prefHeight="26.0" prefWidth="55.0"
+                    text="Send"/>
+            <Button mnemonicParsing="false" onAction="#saveEmail" prefHeight="26.0" prefWidth="59.0"
+                    text="Save"/>
+            <Button mnemonicParsing="false" onAction="#deleteComposedEmail" prefHeight="26.0" prefWidth="72.0"
+                    text="Discard"/>
+         </HBox>
+      </VBox>
+      <HBox prefHeight="62.0" prefWidth="534.0"/>
+   </VBox>
+   <VBox prefHeight="500.0" prefWidth="132.0">
+      <ImageView fitHeight="505.0" fitWidth="132.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <Image url="@z_right_gmail_background.png"/>
+      </ImageView>
+   </VBox>
+</HBox>
